@@ -19,9 +19,3 @@ Rate My Hospital is a groundbreaking website designed to empower patients and he
 ## Mission
 
 Our mission is to empower patients with the knowledge they need to make informed healthcare decisions, ultimately leading to better healthcare experiences and outcomes for all. Rate My Hospital is your go-to resource for finding and evaluating healthcare providers, all in one convenient platform.
-
-
-
-
-
-
