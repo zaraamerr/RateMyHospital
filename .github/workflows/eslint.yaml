@@ -1,0 +1,20 @@
+name: ESLint and Build CI
+on: 
+  workflow_dispatch:
+  pull_request:
+    branches: '*'
+
+jobs:
+  eslint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install modules
+      run: npm ci
+
+    - name: Run ESLint
+      run: npx eslint . --ext .js,.jsx,.ts,.tsx
+
+    - name: Build
+      run: npm run build
