@@ -40,3 +40,38 @@
 .read-the-docs {
   color: #888;
 }
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-content {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+}
+
+.navigate-button {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.logo-image {
+  width: 300px; /* Set the width to 300px */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Add rounded corners */
+}
+
+.h1 {
+  font-family: 'Arial', sans-serif; /* Use a preferred font-family */
+  font-size: 30px; /* Set the font size to a smaller size */
+  color: #333; /* Set the color to a dark shade, adjust as needed */
+  font-weight: bold; /* Make the text bold */
+  text-align: center; /* Center the text */
+  margin-bottom: 20px; /* Add some space below the heading */
+}

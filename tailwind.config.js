@@ -11,46 +11,16 @@ export default {
       "sans-lexend": ["Lexend", "sans-serif"],
       "sans-poppins": ["Poppins", "sans-serif"],
     },
-    zIndex: {
 
-    },
-    padding:{
-
-    },
-    margin:{
-
-    },
     extend: {
       screens: {
 
       },
       colors: {
-
-      },
-      boxShadow: {
-
-      },
-      lineHeight: {
-
-      },
-      width: {
-
-      },
-      height: {
+        "auth_bg":"#A6BAAF",
 
 
       },
-      fontSize: {
-      },
-      fontWeight: {
-
-
-      },
-      borderWidth: {
-
-      },
-      borderColor: {
-      }
 
   },
   plugins: [],

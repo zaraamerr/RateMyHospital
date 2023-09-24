@@ -14,6 +14,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 </head>
 <body class="w3-theme-l5">
 
+
 <!-- Navbar -->
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
@@ -126,13 +127,17 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
           <div class="w3-card w3-round w3-white">
             <div class="w3-container w3-padding">
               <h6 class="w3-opacity">What's new...</h6>
-              <p contenteditable="true" class="w3-border w3-padding">Status: Feeling Sick</p>
-              <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Post</button> 
+              <input type="text" id="commentInput" placeholder="Status: Feeling Sick" class="w3-border w3-padding">
+              <button type="button" class="w3-button w3-theme" onclick="addComment()">
+                  <i class="fa fa-pencil"></i> Write a Post
+              </button>
             </div>
           </div>
         </div>
       </div>
-      
+
+      <div id="commentContainer"></div>
+
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
         <span class="w3-right w3-opacity">1 min</span>
         <h4>John Doe</h4>
@@ -255,6 +260,60 @@ function openNav() {
   }
 }
 </script>
+
+<script>
+  function addComment() {
+    const commentInput = document.getElementById('commentInput');
+    const comment = commentInput.value;
+
+    // Clear the input field
+    commentInput.value = '';
+
+    // Create a new comment div
+    const commentDiv = document.createElement('div');
+    commentDiv.classList.add('comment');
+    commentDiv.className = 'w3-container w3-card w3-white w3-round w3-margin';
+
+    const timeSpan = document.createElement('span');
+    timeSpan.classList.add('w3-right', 'w3-opacity');
+    timeSpan.textContent = '1 min';
+    commentDiv.appendChild(timeSpan);
+
+    const nameHeader = document.createElement('h4');
+    nameHeader.textContent = 'John Doe';
+    commentDiv.appendChild(nameHeader);
+
+    const visitedHeader = document.createElement('h4');
+    visitedHeader.innerHTML = 'Visited: <strong> NYU LANGONE COBBLE HILL </strong>';
+    commentDiv.appendChild(visitedHeader);
+
+    const hr = document.createElement('hr');
+    hr.classList.add('w3-clear');
+    commentDiv.appendChild(hr);
+
+    const commentParagraph = document.createElement('p');
+    commentParagraph.textContent = comment;
+    commentDiv.appendChild(commentParagraph);
+
+    const likeButton = document.createElement('button');
+    likeButton.type = 'button';
+    likeButton.classList.add('w3-button', 'w3-theme-d1', 'w3-margin-bottom','special');
+    likeButton.innerHTML = '<i class="fa fa-thumbs-up"></i> Like';
+    commentDiv.appendChild(likeButton);
+
+    const commentButton = document.createElement('button');
+    commentButton.type = 'button';
+    commentButton.classList.add('w3-button', 'w3-theme-d2', 'w3-margin-bottom');
+    commentButton.innerHTML = '<i class="fa fa-comment"></i> Comment';
+    commentDiv.appendChild(commentButton);
+
+    // Add the comment to the top
+    const commentContainer = document.getElementById('commentContainer');
+    commentContainer.insertBefore(commentDiv, commentContainer.firstChild);
+  }
+</script>
+
+
 
 </body>
 </html> 
